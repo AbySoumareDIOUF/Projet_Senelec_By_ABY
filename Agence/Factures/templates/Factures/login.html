@@ -1,0 +1,67 @@
+{% extends "Factures/base.html" %}
+
+{% block content %}
+  {% for message in messages %}
+    <div class="alert alert-danger">
+      {{ message }}
+    </div>
+  {% endfor %}
+
+<div class="container">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-4">
+            <h3>Connexion</h3>
+            <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <h1>👋😎 Bienvenue</h1>
+              <div class="centerr">
+                
+              </div>
+              <label class="pure-material-textfield-outlined">
+                <span>Nom</span><br>
+                <input type="text" class="form-control" value="{{ nom }}" name="nom" id="" placeholder="" required>
+              </label>
+            
+              <label class="pure-material-textfield-outlined">
+                <span>Prénom</span><br>
+                <input type="text" class="form-control" value="{{ prenom }}" name="prenom" id="" placeholder="" required>
+              </label>
+            
+              <label class="pure-material-textfield-outlined">
+                <span>E-mail</span><br>
+                <input type="email" class="form-control" value="{{ email }}" name="email" id="" placeholder="" required>
+              </label>
+            
+              <label class="pure-material-textfield-outlined">
+                <span>Téléphone</span><br>
+                <input type="text" class="form-control" value="{{ Tel }}" name="Tel" id="" placeholder="" required>
+              </label>
+            
+              <label class="pure-material-textfield-outlined">
+                <span>Mot De Passe</span><br>
+                <input type="password" class="form-control" name="motdepasse" id="" placeholder="" required>
+              </label>
+            
+              <label class="pure-material-textfield-outlined">
+                <span>Confirmation Mot De Passe</span><br>
+                <input type="password" class="form-control" name="confirmationmdp" id="" placeholder="" required>
+              </label>
+            
+              <label class="pure-material-checkbox">
+                <input type="checkbox" required>
+                <span>J'accepte toutes les conditions <a href="https://github.com/AbySoumareDIOUF/Projet_Senelec" target="_blank" title="Actually not a Terms of Service">Services et termes</a></span>
+              </label>
+              
+              
+            <div id="butt">
+                  <button class="pure-material-button-contained btn btn-primary" type="submit">Valider</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://img.freepik.com/photos-gratuite/ciel-du-coucher-du-soleil-alimente-energie-eolienne-solaire-generee-par-ia_188544-26193.jpg?size=626&ext=jpg&ga=GA1.2.1269487378.1684348333&semt=sph" width="550px" height="400px" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

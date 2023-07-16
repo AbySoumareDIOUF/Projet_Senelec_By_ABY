@@ -1,0 +1,52 @@
+{% extends "base.html"%}
+
+{% block content %}
+{% for message in messages %}
+{{ messages }}
+{% endfor %}
+
+
+
+
+<div class="container">
+    <div class="row mt-5 mb-5 shadow ">
+        <div class="col-lg-6 shadow p-4 ">
+            <h3>Connexion</h3>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nom</label>
+                    <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp">
+                    <small id="texHelp" class="form-text text-muted"></small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Prenom</label>
+                    <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp">
+                    <small id="textHelp" class="form-text text-muted"></small>
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Adresse Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Mot de passe</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1"> Confirmez votre Mot de passe</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Cocher</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Inscrivez-vous</button>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://www.senenews.com/wp-content/uploads/2022/11/senelec.jpg" height="400px" alt="" >
+        </div>
+    </div>
+</div>
+
+{% endblock %}
